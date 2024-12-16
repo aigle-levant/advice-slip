@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+$bg: hsl(218, 23%, 16%);
+$quote-header-text: hsl(150, 100%, 66%);
+$text: hsl(193, 38%, 86%);
+$other: hsl(217, 19%, 38%);
+$content-bg: hsl(217, 19%, 24%);
+$mobile: 767px;
+$desktop: 768px;
+
+body
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    background-color: $bg;
+    color: $text;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn
+{
+    background-color: $quote-header-text;
+    border-radius: 50%;
+    border: none;
+    padding: 15px;
+    float: left;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out;
+    &:hover
+    {
+        box-shadow: 0 0 10px 4px $quote-header-text;
+    }
+    &:active
+    {
+        background-color: $text;
+        box-shadow: 0 0 10px 4px $text;
+    }
+    @media (max-width: $mobile)
+    {
+        top: 55%;    
+    }
+    @media (min-width: $desktop)
+    {
+        top: 60%;
+    }
+}
+
+.wrapper
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $content-bg;
+    position: absolute;
+    text-align: center;
+    border-radius: 2%;
+    @media (max-width: $mobile)
+    {
+        padding: 30px;
+        max-width: 100px;
+        min-height: 150px;
+        top: 15%;
+    }
+    @media (min-width: $desktop)
+    {
+        padding: 50px;
+        min-width: 180px;
+        max-width: 400px;
+        top: 15%;
+    }
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.divider
+{
+    margin: 10px 0;
+    @media (max-width: $mobile)
+    {
+        max-width: 150px;    
+    }
+}
+
+.text-content
+{
+    p
+    {
+        letter-spacing: 4px;
+        color: $quote-header-text;
+        font-size: 11px;
+    }
+    h1
+    {
+        font-size: 24px;
+    }
+}
+
+.attribution
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 11px;
+    text-align: center;
+    a
+    {
+        color: hsl(228, 45%, 44%);
+    }
+}
