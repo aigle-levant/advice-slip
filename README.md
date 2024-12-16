@@ -25,7 +25,6 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 - Semantic HTML5 markup
 - SCSS
 - JS
-- [Styled Components](https://styled-components.com/) - For styles
 - Advice-slip API
 - Figma
 
